@@ -1,8 +1,8 @@
 // type 'rafce' to make new component
 import { useState } from 'react';
-import { StyleSheet, Button, ImageBackground, SafeAreaView, Text, TextInput } from 'react-native';
+import { StyleSheet, Button, SafeAreaView, Text, TextInput } from 'react-native';
 
-const Login = () => {
+const Login = ({ navigation }) => {
   const [enteredEmail, setEnteredEmail] = useState('');
   const [enteredPassword, setEnteredPassword] = useState('');
 
@@ -11,7 +11,11 @@ const Login = () => {
       <Text>Login</Text>
       <TextInput style={styles.input} placeholder="Email" onChangeText={setEnteredEmail} value={enteredEmail}/>
       <TextInput style={styles.input} placeholder="Password" onChangeText={setEnteredPassword} value={enteredPassword}/>
-      <Button style={styles.button} title="Login"/>
+      <Button 
+        style={styles.button} 
+        title="Login" 
+        onPress={() => navigation.navigate('MyGarden')}
+      />
     </SafeAreaView>
   )
 }
