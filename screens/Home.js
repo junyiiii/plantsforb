@@ -1,10 +1,10 @@
 import React from 'react'
 import { Animated, StyleSheet, Text, View, Image } from 'react-native'
+import Body from '../components/Body.js'
 
 const Home = () => {
   return (
-    <View style={styles.body}>
-      <Text style={styles.pageheader}>My Garden</Text>
+    <Body title='My Garden'>
       <Image style={styles.onecolumn} source={require('../assets/random-succulent.png')}/>
       <View style={styles.twocolumns}>
         <View style={styles.card1}>
@@ -27,7 +27,7 @@ const Home = () => {
         <View style={styles.plant1}>
           <Image source={require('../assets/rose-icon.png')}/>
         </View>
-        <View>
+        <View style={styles.plantdesc}>
           <Text>Rose</Text>
           <View style={styles.progressBar}>
             <Animated.View style={[StyleSheet.absoluteFill, styles.progressOverlay1]} />
@@ -39,7 +39,7 @@ const Home = () => {
         <View style={styles.plant2}>
           <Image source={require('../assets/sunflower-icon.png')}/>
         </View>
-        <View>
+        <View style={styles.plantdesc}>
           <Text>Sunflower</Text>
           <View style={styles.progressBar}>
             <Animated.View style={[StyleSheet.absoluteFill, styles.progressOverlay2]} />
@@ -47,22 +47,16 @@ const Home = () => {
           <Text>3 more days to go</Text>
         </View>
       </View>
-    </View>
+    </Body>
   )
 }
 
 export default Home
 
 const styles = StyleSheet.create({
-    body: {
-      padding: 20
-    },
-    pageheader: {
-      fontSize: 30,
-      fontWeight: 'bold',
-    },
     onecolumn: {
-      width: '100%'
+      width: '100%',
+      marginBottom: 20
     },
     twocolumns: {
       display: 'flex',
@@ -92,6 +86,7 @@ const styles = StyleSheet.create({
     },
     title2: {
       paddingTop: 20,
+      paddingBottom: 20,
       fontSize: 20,
       fontWeight: '600',
     },
@@ -129,6 +124,11 @@ const styles = StyleSheet.create({
     },
     plants: {
       display: 'flex',
-      flexDirection: 'row'
+      flexDirection: 'row',
+      paddingBottom: 20
+    },
+    plantdesc: {
+      paddingLeft: 20,
+      width: '80%'
     }
 })
