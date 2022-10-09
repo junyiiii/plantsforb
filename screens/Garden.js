@@ -1,16 +1,14 @@
-// rnfes
-
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const Donate = ({ navigation }) => {
+const Garden = () => {
   return (
     <View>
-      <Text>Donate</Text>
+      <Text>Garden</Text>
     </View>
   )
 }
 
-export default Donate
+export default Garden
 
 const styles = StyleSheet.create({})

@@ -1,11 +1,10 @@
 import React from 'react'
 import { Animated, StyleSheet, Text, View, Image } from 'react-native'
-import Navbar from '../components/Navbar'
 
-const MyGarden = ({ navigation }) => {
+const Home = () => {
   return (
     <View style={styles.body}>
-      <Text style={styles.pageheader}>MyGarden</Text>
+      <Text style={styles.pageheader}>My Garden</Text>
       <Image style={styles.onecolumn} source={require('../assets/random-succulent.png')}/>
       <View style={styles.twocolumns}>
         <View style={styles.card1}>
@@ -48,20 +47,19 @@ const MyGarden = ({ navigation }) => {
           <Text>3 more days to go</Text>
         </View>
       </View>
-      <Navbar navigation={navigation}/>
     </View>
   )
 }
 
-export default MyGarden
+export default Home
 
 const styles = StyleSheet.create({
     body: {
       padding: 20
     },
     pageheader: {
-        fontSize: 30,
-        fontWeight: 'bold',
+      fontSize: 30,
+      fontWeight: 'bold',
     },
     onecolumn: {
       width: '100%'
