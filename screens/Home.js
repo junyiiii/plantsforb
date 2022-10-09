@@ -7,14 +7,14 @@ const Home = () => {
     <Body title='My Garden'>
       <Image style={styles.onecolumn} source={require('../assets/random-succulent.png')}/>
       <View style={styles.twocolumns}>
-        <View style={styles.card1}>
+        <View style={[styles.card, {backgroundColor: '#a58772'}]}>
           <Image source={require('../assets/seed-currency.png')}/>
           <View>
             <Text style={styles.bold}>100</Text>
             <Text>collected</Text>
           </View>
         </View>
-        <View style={styles.card2}>
+        <View style={[styles.card, {backgroundColor: '#cee8d7'}]}>
           <Image source={require('../assets/desert-group-icon.png')}/>
           <View>
             <Text style={styles.bold}>11</Text>
@@ -24,7 +24,7 @@ const Home = () => {
       </View>
       <Text style={styles.title2}>Plants in Progress</Text>
       <View style={styles.plants}>
-        <View style={styles.plant1}>
+        <View style={[styles.plant, {backgroundColor: '#e1eeff'}]}>
           <Image source={require('../assets/rose-icon.png')}/>
         </View>
         <View style={styles.plantdesc}>
@@ -36,7 +36,7 @@ const Home = () => {
         </View>
       </View>
       <View style={styles.plants}>
-        <View style={styles.plant2}>
+        <View style={[styles.plant, {backgroundColor: '#cee8d7'}]}>
           <Image source={require('../assets/sunflower-icon.png')}/>
         </View>
         <View style={styles.plantdesc}>
@@ -66,40 +66,21 @@ const styles = StyleSheet.create({
       fontSize: 30,
       fontWeight: 'bold',
     },
-    card1: {
+    card: {
       padding: 20,
       borderRadius: 10,
       width: '50%',
-      backgroundColor: '#a58772',
       display: 'flex',
       flexDirection: 'row',
-      justifyContent: 'space-around'
+      justifyContent: 'space-around',
     }, 
-    card2: {
-      padding: 20,
-      borderRadius: 10,
-      width: '50%',
-      backgroundColor: '#cee8d7',
-      display: 'flex',
-      flexDirection: 'row',
-      justifyContent: 'space-around'
-    },
     title2: {
       paddingTop: 20,
       paddingBottom: 20,
       fontSize: 20,
       fontWeight: '600',
     },
-    plant1: {
-      backgroundColor: '#e1eeff',
-      borderRadius: 20,
-      width: 70,
-      height: 70,
-      display: 'flex',
-      alignItems: 'center'
-    },
-    plant2: {
-      backgroundColor: '#cee8d7',
+    plant: {
       borderRadius: 20,
       width: 70,
       height: 70,
