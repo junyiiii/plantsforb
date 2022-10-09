@@ -3,7 +3,7 @@
 import { View, StyleSheet, Button, Image } from 'react-native'
 import React from 'react'
 
-const Navbar = () => {
+const Navbar = ({ navigation }) => {
   return (
     <View style={styles.navbar}>
       <View style={styles.center}>
@@ -16,11 +16,16 @@ const Navbar = () => {
       </View>
       <View style={styles.center}>
         <Image source={require('../assets/store-icon.png')} />
+        <Button style={styles.navbartab} title='Main'/>
+      </View>
+      <View style={styles.center}>
+        <Image source={require('../assets/store-icon.png')} />
         <Button style={styles.navbartab} title='Store'/>
       </View>
       <View style={styles.center}>
         <Image source={require('../assets/donate-icon.png')} />
-        <Button style={styles.navbartab} title='Donate'/>
+        <Button style={styles.navbartab} title='Donate'
+        onPress={() => navigation.navigate('Donate')}/>
       </View>
     </View>
   )

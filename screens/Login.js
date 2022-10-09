@@ -1,4 +1,3 @@
-// type 'rafce' to make new component
 import { useState } from 'react';
 import { StyleSheet, Button, SafeAreaView, Text, TextInput } from 'react-native';
 

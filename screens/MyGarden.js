@@ -1,10 +1,10 @@
 import React from 'react'
-import { SafeAreaView, Animated, StyleSheet, Text, View, Image } from 'react-native'
+import { Animated, StyleSheet, Text, View, Image } from 'react-native'
 import Navbar from '../components/Navbar'
 
-const MyGarden = () => {
+const MyGarden = ({ navigation }) => {
   return (
-    <SafeAreaView style={styles.body}>
+    <View style={styles.body}>
       <Text style={styles.pageheader}>MyGarden</Text>
       <Image style={styles.onecolumn} source={require('../assets/random-succulent.png')}/>
       <View style={styles.twocolumns}>
@@ -48,8 +48,8 @@ const MyGarden = () => {
           <Text>3 more days to go</Text>
         </View>
       </View>
-      <Navbar />
-    </SafeAreaView>
+      <Navbar navigation={navigation}/>
+    </View>
   )
 }
 
